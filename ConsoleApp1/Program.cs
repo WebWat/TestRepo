@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Net.NetworkInformation;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace ConsoleApp1
 {
@@ -7,13 +10,17 @@ namespace ConsoleApp1
     {
         static async Task Main(string[] args)
         {
-            for (int i = 0; i <= 10; i++)
+            Console.WriteLine("Press something to add new task:");
+            while (true)
             {
-                await Task.Run(() => Console.WriteLine($"Hello{i}!"));
-                await Task.Delay(200);
+                Console.ReadKey();
+                await Task.Run(() => Operation());
             }
-            Console.WriteLine("The End");
-            Console.ReadKey();
+        }
+
+        static void Operation()
+        {
+            Console.WriteLine(" - Hello");
         }
     }
 }
