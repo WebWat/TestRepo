@@ -13,11 +13,11 @@ namespace ConsoleApp1
         static void Main()
         {
             TimerCallback timerCallback = new TimerCallback(Operation);
-            Timer timer = new Timer(timerCallback, null, 0, 60000);      
+            Timer timer = new Timer(timerCallback, null, 0, 60000);
 
             Console.ReadKey();
         }
-        
+
         static void Operation(object obj)
         {
             Console.Clear();
