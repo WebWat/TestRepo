@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static MemoryManager MemoryManager = new MemoryManager();
+        static readonly MemoryManager MemoryManager = new MemoryManager();
 
         static void Main()
         {
